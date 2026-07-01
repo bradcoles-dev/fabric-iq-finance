@@ -11,7 +11,7 @@
 
 # PARAMETERS CELL ********************
 
-vl = notebookutils.variableLibrary.getLibrary("Variables")
+vl = notebookutils.variableLibrary.getLibrary("VL_Variables")
 WORKSPACE_ID = vl.WORKSPACE_ID
 LAKEHOUSE_ID = vl.LAKEHOUSE_ID
 
