@@ -80,6 +80,8 @@ Each notebook reads the previous one's output, so they must run in this order:
 
 Each notebook expects the workspace's `VL_Variables` **Variable Library** with `WORKSPACE_ID` and `LAKEHOUSE_ID` keys (same pattern `dbt-fabric-finance` uses), and installs `portfolio_iq` at runtime with `%pip install git+https://github.com/bradcoles-dev/fabric-iq-finance.git`.
 
+`PL_Orchestrator` chains all four notebooks in the order above for the initial run. `NB_portfolio_optimizer` overwrites `iq_portfolio_recommendation`, so once a position is actually purchased against that recommendation, `NB_value_screen`, `NB_diversification_graph`, and `NB_portfolio_optimizer` are deactivated in the pipeline (`state: "Inactive"`, `onInactiveMarkAs: "Succeeded"`) — re-running or scheduling `PL_Orchestrator` after that point only executes `NB_portfolio_actuals_refresh`, so the purchased recommendation stays frozen for the 6-month plan-vs-actual comparison.
+
 ### 4. Build the Fabric IQ layer
 
 Ontology, Data agent, Operations agent, and Plan are built directly in the Fabric portal against the `iq_*` tables above and Project 1's `SM_dbt-fabric-finance` semantic model — intentionally not automated here.
