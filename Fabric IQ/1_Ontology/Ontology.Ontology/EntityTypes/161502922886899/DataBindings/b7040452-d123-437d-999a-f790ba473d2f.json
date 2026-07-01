@@ -1,0 +1,100 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "b7040452-d123-437d-999a-f790ba473d2f",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "book_equity",
+        "targetPropertyId": "6122681848431121067"
+      },
+      {
+        "sourceColumnName": "capex",
+        "targetPropertyId": "6122681848579483015"
+      },
+      {
+        "sourceColumnName": "cash",
+        "targetPropertyId": "6122681848642572135"
+      },
+      {
+        "sourceColumnName": "current_assets",
+        "targetPropertyId": "6122681846403192919"
+      },
+      {
+        "sourceColumnName": "current_liabilities",
+        "targetPropertyId": "6122681846575338878"
+      },
+      {
+        "sourceColumnName": "ebit",
+        "targetPropertyId": "6122681847064799830"
+      },
+      {
+        "sourceColumnName": "ebitda",
+        "targetPropertyId": "6122681847741655739"
+      },
+      {
+        "sourceColumnName": "eps_basic",
+        "targetPropertyId": "6122681849023129272"
+      },
+      {
+        "sourceColumnName": "eps_diluted",
+        "targetPropertyId": "6122681848677849613"
+      },
+      {
+        "sourceColumnName": "fiscal_year",
+        "targetPropertyId": "6122681848807740841"
+      },
+      {
+        "sourceColumnName": "free_cash_flow",
+        "targetPropertyId": "6122681846912051851"
+      },
+      {
+        "sourceColumnName": "gross_profit",
+        "targetPropertyId": "6122681846614066005"
+      },
+      {
+        "sourceColumnName": "net_debt",
+        "targetPropertyId": "6122681849551039990"
+      },
+      {
+        "sourceColumnName": "net_income",
+        "targetPropertyId": "6122681847117384534"
+      },
+      {
+        "sourceColumnName": "operating_cash_flow",
+        "targetPropertyId": "6122681848326128674"
+      },
+      {
+        "sourceColumnName": "operating_income",
+        "targetPropertyId": "6122681849793096476"
+      },
+      {
+        "sourceColumnName": "period_end",
+        "targetPropertyId": "6122681849886239054"
+      },
+      {
+        "sourceColumnName": "revenue",
+        "targetPropertyId": "6122681846809140099"
+      },
+      {
+        "sourceColumnName": "ticker",
+        "targetPropertyId": "6122681847204210737"
+      },
+      {
+        "sourceColumnName": "total_assets",
+        "targetPropertyId": "6122681847453877457"
+      },
+      {
+        "sourceColumnName": "total_debt",
+        "targetPropertyId": "6122681847203784864"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "00000000-0000-0000-0000-000000000000",
+      "itemId": "93c94398-8cd2-af3b-4f6c-5ed8e846b93b",
+      "sourceTableName": "fact_annual_financials",
+      "sourceSchema": "gold"
+    }
+  }
+}

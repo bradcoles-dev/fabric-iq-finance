@@ -4,11 +4,162 @@
   "namespace": "usertypes",
   "baseEntityTypeId": null,
   "name": "AnnualFinancials",
-  "entityIdParts": [],
+  "entityIdParts": [
+    "6122681847204210737",
+    "6122681848807740841"
+  ],
   "displayNamePropertyId": null,
   "namespaceType": "Custom",
   "visibility": "Visible",
-  "properties": [],
+  "properties": [
+    {
+      "id": "6122681848431121067",
+      "name": "book_equity",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "6122681848579483015",
+      "name": "capex",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "6122681848642572135",
+      "name": "cash",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "6122681846403192919",
+      "name": "current_assets",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "6122681846575338878",
+      "name": "current_liabilities",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "6122681847064799830",
+      "name": "ebit",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "6122681847741655739",
+      "name": "ebitda",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "6122681849023129272",
+      "name": "eps_basic",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "6122681848677849613",
+      "name": "eps_diluted",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "6122681848807740841",
+      "name": "fiscal_year",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "BigInt"
+    },
+    {
+      "id": "6122681846912051851",
+      "name": "free_cash_flow",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "6122681846614066005",
+      "name": "gross_profit",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "6122681849551039990",
+      "name": "net_debt",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "6122681847117384534",
+      "name": "net_income",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "6122681848326128674",
+      "name": "operating_cash_flow",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "6122681849793096476",
+      "name": "operating_income",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "6122681849886239054",
+      "name": "period_end",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "DateTime"
+    },
+    {
+      "id": "6122681846809140099",
+      "name": "revenue",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "6122681847204210737",
+      "name": "ticker",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "6122681847453877457",
+      "name": "total_assets",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "6122681847203784864",
+      "name": "total_debt",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    }
+  ],
   "timeseriesProperties": [],
   "untypedProperties": []
 }

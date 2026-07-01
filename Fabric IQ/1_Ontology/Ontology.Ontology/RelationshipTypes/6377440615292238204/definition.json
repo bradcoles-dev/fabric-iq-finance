@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/relationshipType/1.0.0/schema.json",
+  "namespace": "usertypes",
+  "id": "6377440615292238204",
+  "name": "hasFinancials",
+  "namespaceType": "Custom",
+  "source": {
+    "entityTypeId": "194701271121049"
+  },
+  "target": {
+    "entityTypeId": "161502922886899"
+  },
+  "semanticEnrichment": {
+    "description": "Links a security to its annual financial statements (revenue, profitability, cash flow) across fiscal years. Use this for fundamentals and trend questions, as distinct from the point-in-time valuation ratios already on Security.",
+    "customAttributes": {}
+  }
+}

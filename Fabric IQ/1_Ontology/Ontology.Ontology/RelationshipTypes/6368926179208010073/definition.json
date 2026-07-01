@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/relationshipType/1.0.0/schema.json",
+  "namespace": "usertypes",
+  "id": "6368926179208010073",
+  "name": "belongsToSector",
+  "namespaceType": "Custom",
+  "source": {
+    "entityTypeId": "194701271121049"
+  },
+  "target": {
+    "entityTypeId": "235733651414851"
+  },
+  "semanticEnrichment": {
+    "description": "Associates a security with its sector classification. Use this to compare securities relative to sector peers - e.g. identifying value stocks (low P/E, low P/B, high ROE) requires comparing within a sector, not across the whole universe.",
+    "customAttributes": {}
+  }
+}

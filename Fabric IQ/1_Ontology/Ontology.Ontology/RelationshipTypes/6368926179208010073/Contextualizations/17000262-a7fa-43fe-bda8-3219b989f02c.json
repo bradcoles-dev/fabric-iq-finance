@@ -1,0 +1,23 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/contextualization/1.0.0/schema.json",
+  "id": "17000262-a7fa-43fe-bda8-3219b989f02c",
+  "dataBindingTable": {
+    "workspaceId": "00000000-0000-0000-0000-000000000000",
+    "itemId": "93c94398-8cd2-af3b-4f6c-5ed8e846b93b",
+    "sourceTableName": "dim_security",
+    "sourceSchema": "gold",
+    "sourceType": "LakehouseTable"
+  },
+  "sourceKeyRefBindings": [
+    {
+      "sourceColumnName": "ticker",
+      "targetPropertyId": "6003949783600067145"
+    }
+  ],
+  "targetKeyRefBindings": [
+    {
+      "sourceColumnName": "sector",
+      "targetPropertyId": "6119976272495288012"
+    }
+  ]
+}

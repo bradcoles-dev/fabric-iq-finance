@@ -1,0 +1,152 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "45e64e0b-e03a-4a1b-9662-36588589dac1",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "annualised_return",
+        "targetPropertyId": "6016512313746416843"
+      },
+      {
+        "sourceColumnName": "annualised_volatility",
+        "targetPropertyId": "6016512312317703771"
+      },
+      {
+        "sourceColumnName": "beta",
+        "targetPropertyId": "6016512315060834207"
+      },
+      {
+        "sourceColumnName": "company_name",
+        "targetPropertyId": "6003949784110406842"
+      },
+      {
+        "sourceColumnName": "country",
+        "targetPropertyId": "6003949782015359602"
+      },
+      {
+        "sourceColumnName": "currency",
+        "targetPropertyId": "6003949781590782258"
+      },
+      {
+        "sourceColumnName": "current_ratio",
+        "targetPropertyId": "6016512312601091376"
+      },
+      {
+        "sourceColumnName": "date_from",
+        "targetPropertyId": "6016512312476875052"
+      },
+      {
+        "sourceColumnName": "date_to",
+        "targetPropertyId": "6016512313255195404"
+      },
+      {
+        "sourceColumnName": "debt_to_equity",
+        "targetPropertyId": "6016512312878711290"
+      },
+      {
+        "sourceColumnName": "dividend_yield",
+        "targetPropertyId": "6016512314056959166"
+      },
+      {
+        "sourceColumnName": "earnings_growth_yoy",
+        "targetPropertyId": "6016512311602600437"
+      },
+      {
+        "sourceColumnName": "enterprise_value",
+        "targetPropertyId": "6016512315284792071"
+      },
+      {
+        "sourceColumnName": "eps_ttm",
+        "targetPropertyId": "6016512311617207146"
+      },
+      {
+        "sourceColumnName": "ev_ebitda",
+        "targetPropertyId": "6016512315169845377"
+      },
+      {
+        "sourceColumnName": "exchange",
+        "targetPropertyId": "6003949782936901862"
+      },
+      {
+        "sourceColumnName": "gross_margin",
+        "targetPropertyId": "6016512311877348568"
+      },
+      {
+        "sourceColumnName": "industry",
+        "targetPropertyId": "6003949783889868676"
+      },
+      {
+        "sourceColumnName": "market_cap",
+        "targetPropertyId": "6016512313641872359"
+      },
+      {
+        "sourceColumnName": "market_index",
+        "targetPropertyId": "6003949781995300344"
+      },
+      {
+        "sourceColumnName": "max_drawdown",
+        "targetPropertyId": "6016512313868592732"
+      },
+      {
+        "sourceColumnName": "operating_margin",
+        "targetPropertyId": "6016512312157908021"
+      },
+      {
+        "sourceColumnName": "pe_ratio_forward",
+        "targetPropertyId": "6016512312425722990"
+      },
+      {
+        "sourceColumnName": "pe_ratio_ttm",
+        "targetPropertyId": "6016512313409420328"
+      },
+      {
+        "sourceColumnName": "price_to_book",
+        "targetPropertyId": "6016512314097998123"
+      },
+      {
+        "sourceColumnName": "profit_margin",
+        "targetPropertyId": "6016512312414135088"
+      },
+      {
+        "sourceColumnName": "return_on_assets",
+        "targetPropertyId": "6016512314797829533"
+      },
+      {
+        "sourceColumnName": "return_on_equity",
+        "targetPropertyId": "6016512312675217283"
+      },
+      {
+        "sourceColumnName": "revenue_growth_yoy",
+        "targetPropertyId": "6016512315482641685"
+      },
+      {
+        "sourceColumnName": "sector",
+        "targetPropertyId": "6003949783893422638"
+      },
+      {
+        "sourceColumnName": "sharpe_ratio",
+        "targetPropertyId": "6016512313510534223"
+      },
+      {
+        "sourceColumnName": "ticker",
+        "targetPropertyId": "6003949783600067145"
+      },
+      {
+        "sourceColumnName": "trading_days",
+        "targetPropertyId": "6016512313184565704"
+      },
+      {
+        "sourceColumnName": "value_score",
+        "targetPropertyId": "6091720881682752310"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "00000000-0000-0000-0000-000000000000",
+      "itemId": "93c94398-8cd2-af3b-4f6c-5ed8e846b93b",
+      "sourceTableName": "iq_security_full",
+      "sourceSchema": "dbo"
+    }
+  }
+}

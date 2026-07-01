@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/relationshipType/1.0.0/schema.json",
+  "namespace": "usertypes",
+  "id": "6384112777247486357",
+  "name": "correlatesWith",
+  "namespaceType": "Custom",
+  "source": {
+    "entityTypeId": "194701271121049"
+  },
+  "target": {
+    "entityTypeId": "194701271121049"
+  },
+  "semanticEnrichment": {
+    "description": "A symmetric relationship indicating two securities\u0027 daily returns are correlated above 0.5 over a 252-day lookback. Use this to reason about diversification and concentration risk \u2014 connected securities move together and provide limited diversification benefit if held simultaneously.",
+    "customAttributes": {}
+  }
+}

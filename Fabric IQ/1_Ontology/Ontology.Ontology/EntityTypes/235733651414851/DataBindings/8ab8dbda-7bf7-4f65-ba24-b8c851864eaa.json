@@ -1,0 +1,20 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "8ab8dbda-7bf7-4f65-ba24-b8c851864eaa",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "sector",
+        "targetPropertyId": "6119976272495288012"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "00000000-0000-0000-0000-000000000000",
+      "itemId": "93c94398-8cd2-af3b-4f6c-5ed8e846b93b",
+      "sourceTableName": "dim_security",
+      "sourceSchema": "gold"
+    }
+  }
+}

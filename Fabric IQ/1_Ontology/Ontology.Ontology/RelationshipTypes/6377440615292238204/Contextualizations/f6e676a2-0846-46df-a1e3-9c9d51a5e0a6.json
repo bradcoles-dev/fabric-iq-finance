@@ -1,0 +1,27 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/contextualization/1.0.0/schema.json",
+  "id": "f6e676a2-0846-46df-a1e3-9c9d51a5e0a6",
+  "dataBindingTable": {
+    "workspaceId": "00000000-0000-0000-0000-000000000000",
+    "itemId": "93c94398-8cd2-af3b-4f6c-5ed8e846b93b",
+    "sourceTableName": "fact_annual_financials",
+    "sourceSchema": "gold",
+    "sourceType": "LakehouseTable"
+  },
+  "sourceKeyRefBindings": [
+    {
+      "sourceColumnName": "ticker",
+      "targetPropertyId": "6003949783600067145"
+    }
+  ],
+  "targetKeyRefBindings": [
+    {
+      "sourceColumnName": "ticker",
+      "targetPropertyId": "6122681847204210737"
+    },
+    {
+      "sourceColumnName": "fiscal_year",
+      "targetPropertyId": "6122681848807740841"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "322db561-c780-42f8-903d-045d4fb86313",
+  "dataBindingConfiguration": {
+    "dataBindingType": "TimeSeries",
+    "timestampColumnName": "as_of_date",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "dollar_amount",
+        "targetPropertyId": "6338108347351436643"
+      },
+      {
+        "sourceColumnName": "latest_price",
+        "targetPropertyId": "6127267607176540839"
+      },
+      {
+        "sourceColumnName": "purchase_price",
+        "targetPropertyId": "6127267605423483977"
+      },
+      {
+        "sourceColumnName": "ticker",
+        "targetPropertyId": "6125600455247441119"
+      },
+      {
+        "sourceColumnName": "unrealized_return",
+        "targetPropertyId": "6127267605654484270"
+      },
+      {
+        "sourceColumnName": "weight",
+        "targetPropertyId": "6337381140793304077"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "00000000-0000-0000-0000-000000000000",
+      "itemId": "93c94398-8cd2-af3b-4f6c-5ed8e846b93b",
+      "sourceTableName": "iq_portfolio_actuals",
+      "sourceSchema": "dbo"
+    }
+  }
+}

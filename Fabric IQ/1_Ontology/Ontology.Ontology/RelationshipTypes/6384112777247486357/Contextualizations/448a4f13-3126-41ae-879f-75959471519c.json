@@ -1,0 +1,23 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/contextualization/1.0.0/schema.json",
+  "id": "448a4f13-3126-41ae-879f-75959471519c",
+  "dataBindingTable": {
+    "workspaceId": "00000000-0000-0000-0000-000000000000",
+    "itemId": "93c94398-8cd2-af3b-4f6c-5ed8e846b93b",
+    "sourceTableName": "iq_correlation_edges",
+    "sourceSchema": "dbo",
+    "sourceType": "LakehouseTable"
+  },
+  "sourceKeyRefBindings": [
+    {
+      "sourceColumnName": "ticker_a",
+      "targetPropertyId": "6003949783600067145"
+    }
+  ],
+  "targetKeyRefBindings": [
+    {
+      "sourceColumnName": "ticker_b",
+      "targetPropertyId": "6003949783600067145"
+    }
+  ]
+}

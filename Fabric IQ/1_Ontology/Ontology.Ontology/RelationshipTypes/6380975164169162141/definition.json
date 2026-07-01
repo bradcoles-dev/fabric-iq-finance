@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/relationshipType/1.0.0/schema.json",
+  "namespace": "usertypes",
+  "id": "6380975164169162141",
+  "name": "heldAs",
+  "namespaceType": "Custom",
+  "source": {
+    "entityTypeId": "194701271121049"
+  },
+  "target": {
+    "entityTypeId": "227926818294162"
+  },
+  "semanticEnrichment": {
+    "description": "Links a security to its position in the recommended and actual portfolio \u2014 target weight/shares at recommendation time, and evolving weight/value as prices move. Use this to answer what\u0027s held, how much was allocated, and how a position has performed since purchase.",
+    "customAttributes": {}
+  }
+}

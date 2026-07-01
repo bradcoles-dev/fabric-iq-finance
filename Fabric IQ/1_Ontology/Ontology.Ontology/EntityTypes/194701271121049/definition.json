@@ -241,6 +241,13 @@
       "redefines": null,
       "baseTypeNamespaceType": null,
       "valueType": "BigInt"
+    },
+    {
+      "id": "6091720881682752310",
+      "name": "value_score",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
     }
   ],
   "timeseriesProperties": [],

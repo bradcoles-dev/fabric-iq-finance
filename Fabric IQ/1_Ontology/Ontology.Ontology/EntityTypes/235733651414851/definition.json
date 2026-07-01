@@ -4,11 +4,70 @@
   "namespace": "usertypes",
   "baseEntityTypeId": null,
   "name": "Sector",
-  "entityIdParts": [],
+  "entityIdParts": [
+    "6119976272495288012"
+  ],
   "displayNamePropertyId": null,
   "namespaceType": "Custom",
   "visibility": "Visible",
-  "properties": [],
+  "properties": [
+    {
+      "id": "6119976272454306010",
+      "name": "company_name",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "6119976272363229734",
+      "name": "country",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "6119976272608755599",
+      "name": "currency",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "6119976270533600436",
+      "name": "exchange",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "6119976273593514705",
+      "name": "industry",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "6119976273905357686",
+      "name": "market_index",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "6119976272495288012",
+      "name": "sector",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "6119976271450503548",
+      "name": "ticker",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    }
+  ],
   "timeseriesProperties": [],
   "untypedProperties": []
 }

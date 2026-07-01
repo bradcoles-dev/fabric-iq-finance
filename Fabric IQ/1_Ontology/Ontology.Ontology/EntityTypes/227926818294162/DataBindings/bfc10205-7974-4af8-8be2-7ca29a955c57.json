@@ -1,0 +1,48 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "bfc10205-7974-4af8-8be2-7ca29a955c57",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "as_of_date",
+        "targetPropertyId": "6125600454316956553"
+      },
+      {
+        "sourceColumnName": "dollar_amount",
+        "targetPropertyId": "6125600452327521759"
+      },
+      {
+        "sourceColumnName": "leftover_cash",
+        "targetPropertyId": "6125600452643503947"
+      },
+      {
+        "sourceColumnName": "price",
+        "targetPropertyId": "6125600455222135137"
+      },
+      {
+        "sourceColumnName": "shares",
+        "targetPropertyId": "6125600453505645427"
+      },
+      {
+        "sourceColumnName": "source",
+        "targetPropertyId": "6125600454155986896"
+      },
+      {
+        "sourceColumnName": "ticker",
+        "targetPropertyId": "6125600455247441119"
+      },
+      {
+        "sourceColumnName": "weight",
+        "targetPropertyId": "6125600454126866561"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "00000000-0000-0000-0000-000000000000",
+      "itemId": "93c94398-8cd2-af3b-4f6c-5ed8e846b93b",
+      "sourceTableName": "iq_portfolio_recommendation",
+      "sourceSchema": "dbo"
+    }
+  }
+}

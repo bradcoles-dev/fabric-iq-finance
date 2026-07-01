@@ -4,11 +4,106 @@
   "namespace": "usertypes",
   "baseEntityTypeId": null,
   "name": "PortfolioPosition",
-  "entityIdParts": [],
+  "entityIdParts": [
+    "6125600455247441119"
+  ],
   "displayNamePropertyId": null,
   "namespaceType": "Custom",
   "visibility": "Visible",
-  "properties": [],
-  "timeseriesProperties": [],
+  "properties": [
+    {
+      "id": "6125600454316956553",
+      "name": "as_of_date",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "DateTime"
+    },
+    {
+      "id": "6125600452327521759",
+      "name": "dollar_amount",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "6125600452643503947",
+      "name": "leftover_cash",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "6125600455222135137",
+      "name": "price",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "6125600453505645427",
+      "name": "shares",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "BigInt"
+    },
+    {
+      "id": "6125600454155986896",
+      "name": "source",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "6125600455247441119",
+      "name": "ticker",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "6125600454126866561",
+      "name": "weight",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    }
+  ],
+  "timeseriesProperties": [
+    {
+      "id": "6127267607176540839",
+      "name": "latest_price",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "6127267605423483977",
+      "name": "purchase_price",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "6127267605654484270",
+      "name": "unrealized_return",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "6337381140793304077",
+      "name": "current_weight",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "6338108347351436643",
+      "name": "current_dollar_amount",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    }
+  ],
   "untypedProperties": []
 }
