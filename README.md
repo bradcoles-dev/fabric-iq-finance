@@ -73,7 +73,7 @@ The screening, diversification, optimization, and allocation logic is fully test
 
 Each notebook reads the previous one's output, so they must run in this order:
 
-1. **`NB_value_screen`** — reads `gold.dim_security` + `gold.fact_security_snapshot` → writes `iq_value_screen`
+1. **`NB_value_screen`** — reads `gold.dim_security` + `gold.fact_security_snapshot` → writes `iq_value_screen` (shortlisted candidates) and `iq_security_full` (the full universe, one managed Delta table joining both sources — this is what `Security` binds to in the Ontology, since an entity type can only have one static data binding)
 2. **`NB_diversification_graph`** — reads `iq_value_screen` + `gold.fact_return_covariance` → writes `iq_diversification_metrics`, `iq_correlation_edges`
 3. **`NB_portfolio_optimizer`** — reads `iq_value_screen` + `gold.fact_return_covariance` → writes `iq_portfolio_recommendation`
 4. **`NB_portfolio_actuals_refresh`** — run later, only once a position is actually purchased. Reads `iq_portfolio_recommendation`, appends to `iq_portfolio_actuals` on a daily schedule to build up the 6-month retrospective track record.

@@ -29,6 +29,7 @@ LAKEHOUSE_ID = vl.LAKEHOUSE_ID
 GOLD_SCHEMA = "gold"
 OUTPUT_SCHEMA = "dbo"
 OUTPUT_TABLE = "iq_value_screen"
+SECURITY_FULL_TABLE = "iq_security_full"
 MIN_PEERS = 3
 TOP_N = 40
 MIN_SCORE = 0.5
@@ -80,6 +81,27 @@ candidates["as_of_date"] = datetime.now(timezone.utc)
 
 print(f"Scored {len(scored):,} securities, shortlisted {len(candidates):,} value candidates.")
 candidates[["ticker", "sector", "value_score"]].head(10)
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
+# CELL ********************
+
+# The Ontology's Security entity type needs one managed Delta table covering
+# the full universe (dim_security joined to fact_security_snapshot) — it
+# can't bind two static sources itself, and a SQL view over gold.* doesn't
+# work either, since Ontology only sees physical OneLake-registered tables.
+security_full_path = f"abfss://{WORKSPACE_ID}@onelake.dfs.fabric.microsoft.com/{LAKEHOUSE_ID}/Tables/{OUTPUT_SCHEMA}/{SECURITY_FULL_TABLE}"
+
+spark.createDataFrame(scored).write.format("delta").mode("overwrite").option(
+    "mergeSchema", "true"
+).save(security_full_path)
+
+print(f"Written {len(scored):,} rows to {security_full_path}")
 
 # METADATA ********************
 
