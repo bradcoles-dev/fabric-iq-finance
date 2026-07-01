@@ -9,6 +9,17 @@
 # META   "dependencies": {}
 # META }
 
+# CELL ********************
+
+%pip install git+https://github.com/bradcoles-dev/fabric-iq-finance.git --quiet
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # PARAMETERS CELL ********************
 
 vl = notebookutils.variableLibrary.getLibrary("VL_Variables")
@@ -31,8 +42,6 @@ MIN_SCORE = 0.5
 
 # CELL ********************
 
-# portfolio_iq comes from an attached custom Environment (build a wheel from
-# this package and attach it to the workspace), not from %pip install here.
 from datetime import datetime, timezone
 
 from portfolio_iq.gold import merge_security_snapshot

@@ -9,6 +9,17 @@
 # META   "dependencies": {}
 # META }
 
+# CELL ********************
+
+%pip install git+https://github.com/bradcoles-dev/fabric-iq-finance.git --quiet
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # PARAMETERS CELL ********************
 
 vl = notebookutils.variableLibrary.getLibrary("VL_Variables")
