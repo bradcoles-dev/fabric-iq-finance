@@ -71,7 +71,12 @@ The screening, diversification, optimization, and allocation logic is fully test
 
 ### 3. Run the notebooks in Fabric
 
-Upload/sync `NB_value_screen`, `NB_diversification_graph`, and `NB_portfolio_optimizer` (in that order) into the Fabric workspace and run them to produce `iq_value_screen`, `iq_diversification_metrics`, `iq_correlation_edges`, and `iq_portfolio_recommendation`. Schedule `NB_portfolio_actuals_refresh` to run daily once a position is actually purchased, to build up `iq_portfolio_actuals` for the 6-month retrospective.
+Each notebook reads the previous one's output, so they must run in this order:
+
+1. **`NB_value_screen`** — reads `gold.dim_security` + `gold.fact_security_snapshot` → writes `iq_value_screen`
+2. **`NB_diversification_graph`** — reads `iq_value_screen` + `gold.fact_return_covariance` → writes `iq_diversification_metrics`, `iq_correlation_edges`
+3. **`NB_portfolio_optimizer`** — reads `iq_value_screen` + `gold.fact_return_covariance` → writes `iq_portfolio_recommendation`
+4. **`NB_portfolio_actuals_refresh`** — run later, only once a position is actually purchased. Reads `iq_portfolio_recommendation`, appends to `iq_portfolio_actuals` on a daily schedule to build up the 6-month retrospective track record.
 
 Each notebook expects the workspace's `VL_Variables` **Variable Library** with `WORKSPACE_ID` and `LAKEHOUSE_ID` keys (same pattern `dbt-fabric-finance` uses), and installs `portfolio_iq` at runtime with `%pip install git+https://github.com/bradcoles-dev/fabric-iq-finance.git`.
 
