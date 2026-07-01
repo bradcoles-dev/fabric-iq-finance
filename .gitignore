@@ -27,3 +27,6 @@ Thumbs.db
 # Jupyter / Fabric notebooks (local exports)
 .ipynb_checkpoints/
 *.ipynb~
+
+# Personal article/blog drafts — not part of the public reference implementation
+blog/
