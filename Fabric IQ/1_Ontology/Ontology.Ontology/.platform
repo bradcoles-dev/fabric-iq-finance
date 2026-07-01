@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Ontology",
+    "displayName": "Ontology"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "f9b0a143-6ca4-83af-4935-1ae596c7c667"
+  }
+}
