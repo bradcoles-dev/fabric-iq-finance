@@ -47,7 +47,7 @@ RISK_FREE_RATE = 0.02
 
 from datetime import datetime, timezone
 
-from portfolio_iq.allocation import allocate_shares
+from portfolio_iq.allocation import allocate_shares, filter_affordable_candidates
 from portfolio_iq.gold import derive_latest_price, pivot_covariance
 from portfolio_iq.optimizer import optimize_portfolio
 
@@ -72,7 +72,15 @@ return_covariance = spark.read.format("delta").load(f"{gold_base}/fact_return_co
 candidates["latest_price"] = derive_latest_price(candidates).values
 candidates = candidates.dropna(subset=["latest_price"]).reset_index(drop=True)
 
-print(f"{len(candidates)} candidates have a derivable price and proceed to optimization.")
+# A share priced above the position's own dollar cap (MAX_POSITION_WEIGHT *
+# BUDGET) can never be sized accurately with whole shares — most brokers
+# don't support fractional shares, so buying even 1 share would blow past
+# the cap. Excluded from the candidate universe up front rather than left
+# for the optimizer to recommend and the allocator to overshoot on.
+latest_prices = candidates.set_index("ticker")["latest_price"]
+candidates = filter_affordable_candidates(candidates, latest_prices, BUDGET, MAX_POSITION_WEIGHT)
+
+print(f"{len(candidates)} candidates have a derivable, affordable price and proceed to optimization.")
 
 # METADATA ********************
 
@@ -107,7 +115,6 @@ weights.head(10)
 
 # CELL ********************
 
-latest_prices = candidates.set_index("ticker")["latest_price"]
 allocation, leftover_cash = allocate_shares(weights, latest_prices, budget=BUDGET)
 
 allocation["source"] = "recommendation"
