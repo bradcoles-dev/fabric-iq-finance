@@ -1,0 +1,195 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "eb0181a3-7ec3-5e84-9625-2845d0d74099",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "parameters": {
+            "GOLD_SCHEMA": {
+              "value": "gold",
+              "type": "string"
+            },
+            "OUTPUT_SCHEMA": {
+              "value": "dbo",
+              "type": "string"
+            },
+            "OUTPUT_TABLE": {
+              "value": "iq_value_screen",
+              "type": "string"
+            },
+            "MIN_PEERS": {
+              "value": "3",
+              "type": "int"
+            },
+            "TOP_N": {
+              "value": "40",
+              "type": "int"
+            },
+            "MIN_SCORE": {
+              "value": "0.5",
+              "type": "float"
+            }
+          }
+        },
+        "policy": {
+          "timeout": "0.0:10:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "NB_value_screen",
+        "dependsOn": []
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "a71e91ca-da42-5bb0-ad5d-f188667b0dcc",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "parameters": {
+            "GOLD_SCHEMA": {
+              "value": "gold",
+              "type": "string"
+            },
+            "DBO_SCHEMA": {
+              "value": "dbo",
+              "type": "string"
+            },
+            "CANDIDATES_TABLE": {
+              "value": "iq_value_screen",
+              "type": "string"
+            },
+            "METRICS_TABLE": {
+              "value": "iq_diversification_metrics",
+              "type": "string"
+            },
+            "EDGES_TABLE": {
+              "value": "iq_correlation_edges",
+              "type": "string"
+            },
+            "CORRELATION_THRESHOLD": {
+              "value": "0.5",
+              "type": "float"
+            }
+          }
+        },
+        "policy": {
+          "timeout": "0.0:10:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "NB_diversification_graph",
+        "dependsOn": [
+          {
+            "activity": "NB_value_screen",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "4dd22293-0f3c-58e0-abc8-bb0b2077ae47",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "parameters": {
+            "GOLD_SCHEMA": {
+              "value": "gold",
+              "type": "string"
+            },
+            "DBO_SCHEMA": {
+              "value": "dbo",
+              "type": "string"
+            },
+            "CANDIDATES_TABLE": {
+              "value": "iq_value_screen",
+              "type": "string"
+            },
+            "OUTPUT_TABLE": {
+              "value": "iq_portfolio_recommendation",
+              "type": "string"
+            },
+            "BUDGET": {
+              "value": "1000",
+              "type": "float"
+            },
+            "MAX_POSITION_WEIGHT": {
+              "value": "0.1",
+              "type": "float"
+            },
+            "MAX_SECTOR_WEIGHT": {
+              "value": "0.25",
+              "type": "float"
+            },
+            "RISK_FREE_RATE": {
+              "value": "0.02",
+              "type": "float"
+            }
+          }
+        },
+        "policy": {
+          "timeout": "0.0:10:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "NB_portfolio_optimizer",
+        "dependsOn": [
+          {
+            "activity": "NB_diversification_graph",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "03eb8b58-459f-5fbd-97d6-bef5b1ae3590",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "parameters": {
+            "GOLD_SCHEMA": {
+              "value": "gold",
+              "type": "string"
+            },
+            "DBO_SCHEMA": {
+              "value": "dbo",
+              "type": "string"
+            },
+            "RECOMMENDATION_TABLE": {
+              "value": "iq_portfolio_recommendation",
+              "type": "string"
+            },
+            "ACTUALS_TABLE": {
+              "value": "iq_portfolio_actuals",
+              "type": "string"
+            }
+          }
+        },
+        "policy": {
+          "timeout": "0.0:10:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "NB_portfolio_actuals_refresh",
+        "dependsOn": [
+          {
+            "activity": "NB_portfolio_optimizer",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
