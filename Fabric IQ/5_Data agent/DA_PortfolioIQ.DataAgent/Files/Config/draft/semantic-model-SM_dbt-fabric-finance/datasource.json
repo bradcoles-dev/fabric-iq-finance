@@ -1,0 +1,752 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/dataAgent/definition/dataSource/1.0.0/schema.json",
+  "artifactId": "2bbdec81-faf4-49e9-8090-cd9270d7bee8",
+  "workspaceId": "4a3ad351-6313-47a6-b9ac-db138446d5a5",
+  "dataSourceInstructions": null,
+  "displayName": "SM_dbt-fabric-finance",
+  "type": "semantic_model",
+  "userDescription": null,
+  "metadata": {
+    "csdl_relationships": "[{\"FromTable\":\"dim_security\",\"FromColumn\":\"ticker\",\"ToTable\":\"fact_annual_financials\",\"ToColumn\":\"ticker\",\"IsActive\":true,\"IsBidirectional\":false,\"Cardinality\":\"ManyToOne\"},{\"FromTable\":\"dim_security\",\"FromColumn\":\"ticker\",\"ToTable\":\"fact_return_covariance\",\"ToColumn\":\"ticker_b\",\"IsActive\":true,\"IsBidirectional\":false,\"Cardinality\":\"ManyToOne\"},{\"FromTable\":\"dim_security\",\"FromColumn\":\"ticker\",\"ToTable\":\"fact_security_snapshot\",\"ToColumn\":\"ticker\",\"IsActive\":true,\"IsBidirectional\":false,\"Cardinality\":\"ManyToOne\"},{\"FromTable\":\"dim_security\",\"FromColumn\":\"ticker\",\"ToTable\":\"fact_return_covariance\",\"ToColumn\":\"ticker_a\",\"IsActive\":true,\"IsBidirectional\":false,\"Cardinality\":\"ManyToOne\"}]"
+  },
+  "elements": [
+    {
+      "id": "7d2c8586-b0de-4eaa-9791-f510c57f58bf",
+      "is_selected": false,
+      "display_name": "dim_security",
+      "type": "semantic_model.table",
+      "description": null,
+      "children": [
+        {
+          "id": "1fa6393d-8758-4d10-91a8-fc96393e94e8",
+          "is_selected": true,
+          "display_name": "ticker",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "ed73d397-c14e-4671-b83f-979e22e9efef",
+          "is_selected": true,
+          "display_name": "company_name",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "bd5e8a14-7992-45bc-9beb-9f0ba0a7dda2",
+          "is_selected": true,
+          "display_name": "sector",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "40496e42-15a9-4390-8fa7-8122bc02318b",
+          "is_selected": true,
+          "display_name": "industry",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "80c96852-4e2f-4411-953d-9864b6f4c2ab",
+          "is_selected": true,
+          "display_name": "country",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "0bb8e5ca-853a-4d64-b956-a1a2fb2823db",
+          "is_selected": true,
+          "display_name": "currency",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "19eee35b-b486-442c-b3fd-74c9a357512a",
+          "is_selected": true,
+          "display_name": "exchange",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "01cdf689-f343-4b1b-a684-485ab2f3faca",
+          "is_selected": true,
+          "display_name": "market_index",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "e2d7b858-6cfb-4988-a3d2-e8d10118cb92",
+      "is_selected": false,
+      "display_name": "fact_security_snapshot",
+      "type": "semantic_model.table",
+      "description": null,
+      "children": [
+        {
+          "id": "1db592d4-b73f-4e3a-8e0c-7a50efed5524",
+          "is_selected": true,
+          "display_name": "ticker",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "c293ab48-7582-4dbe-a3b5-5ad15d86339f",
+          "is_selected": true,
+          "display_name": "trading_days",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "f69af90f-c082-48cd-bfc0-9d01a6fbce33",
+          "is_selected": true,
+          "display_name": "date_from",
+          "type": "semantic_model.column",
+          "data_type": "DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "a1a59e0b-a0b7-4def-8b74-8fb5c79578f8",
+          "is_selected": true,
+          "display_name": "date_to",
+          "type": "semantic_model.column",
+          "data_type": "DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "93f65918-9891-4878-b9d7-9d0ec3e24906",
+          "is_selected": true,
+          "display_name": "annualised_return",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "7d58ff1f-1f2d-4d40-bd52-9d2bb84462e4",
+          "is_selected": true,
+          "display_name": "annualised_volatility",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "8c49affc-63f8-4cc3-96be-aabc1bb752b7",
+          "is_selected": true,
+          "display_name": "sharpe_ratio",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "5f7145b8-a886-49f1-84fe-0971f3ff327c",
+          "is_selected": true,
+          "display_name": "max_drawdown",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "f4a2719a-b594-4ad5-83bb-c643330cf453",
+          "is_selected": true,
+          "display_name": "market_cap",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "deecc8c8-086e-4dec-8b1c-e62b5e5f173d",
+          "is_selected": true,
+          "display_name": "beta",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "a7c8c5f2-14cc-44e9-9cef-a3b988941996",
+          "is_selected": true,
+          "display_name": "pe_ratio_ttm",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "b79edcac-1081-42e8-846f-a784ae1315c3",
+          "is_selected": true,
+          "display_name": "pe_ratio_forward",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "5dba3008-3ac4-45c7-a69e-f7e3a0ef2ed7",
+          "is_selected": true,
+          "display_name": "price_to_book",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "529674cb-a3f1-4d43-a8b5-af415ae2d8ea",
+          "is_selected": true,
+          "display_name": "dividend_yield",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "25a16839-d1c8-4f6a-8673-59867f2ed9ce",
+          "is_selected": true,
+          "display_name": "eps_ttm",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "2771b32a-4c77-4080-bbbf-f1b1a6c5765c",
+          "is_selected": true,
+          "display_name": "return_on_equity",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "4705965d-87a0-4a05-9855-344897acd7ba",
+          "is_selected": true,
+          "display_name": "return_on_assets",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "48f3dbdb-459d-492f-bee2-ddee06dec2fa",
+          "is_selected": true,
+          "display_name": "operating_margin",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "3e48cdeb-2cbc-48b5-9f7a-7dd6c7a9927b",
+          "is_selected": true,
+          "display_name": "profit_margin",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "233943af-7d5b-4c77-ae6e-d2c4c81c248d",
+          "is_selected": true,
+          "display_name": "gross_margin",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "7336e89b-33e7-4e13-a545-43ce2a44d726",
+          "is_selected": true,
+          "display_name": "revenue_growth_yoy",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "3b825144-30a3-46b2-96af-e1153fca6533",
+          "is_selected": true,
+          "display_name": "earnings_growth_yoy",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "58214064-f25e-4ef9-b894-12e55be362aa",
+          "is_selected": true,
+          "display_name": "debt_to_equity",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "781cbd51-82e9-43eb-9c56-370eeb1c7460",
+          "is_selected": true,
+          "display_name": "current_ratio",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "c529f9ef-9360-49de-991f-a2c6eabd3547",
+          "is_selected": true,
+          "display_name": "enterprise_value",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "8bc62eae-f2b2-4f18-9877-97e7ec59ffe2",
+          "is_selected": true,
+          "display_name": "ev_ebitda",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "5e068a2c-5e70-4728-84e7-2f6b9d2d65f3",
+          "is_selected": true,
+          "display_name": "# Securities",
+          "type": "semantic_model.measure",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "25b55ab9-e56b-4e63-807e-de4f76435bf7",
+          "is_selected": true,
+          "display_name": "Total Market Cap",
+          "type": "semantic_model.measure",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "5030c8d5-dc3b-41cb-828e-e612ed844aec",
+          "is_selected": true,
+          "display_name": "Avg Annualised Return",
+          "type": "semantic_model.measure",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "f2d76be2-b42c-4950-9b70-a93c981cb9e8",
+          "is_selected": true,
+          "display_name": "Avg Volatility",
+          "type": "semantic_model.measure",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "928b0ac9-5771-4581-a4ae-ce61d9678a91",
+          "is_selected": true,
+          "display_name": "Avg Sharpe Ratio",
+          "type": "semantic_model.measure",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "dbafce9d-8a1f-457e-81bf-d60f938ae9f6",
+          "is_selected": true,
+          "display_name": "Avg Max Drawdown",
+          "type": "semantic_model.measure",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "d1ab66a2-e24d-403b-b645-1744ea7044d1",
+          "is_selected": true,
+          "display_name": "Best Sharpe Ratio",
+          "type": "semantic_model.measure",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "892fcea2-6554-40f5-8d1b-f0dca49788f3",
+          "is_selected": true,
+          "display_name": "Worst Max Drawdown",
+          "type": "semantic_model.measure",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "62eb9d71-8c2b-4aaf-ab60-4a3fef68508d",
+          "is_selected": true,
+          "display_name": "Avg Beta",
+          "type": "semantic_model.measure",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "f07f19fc-8ace-4375-8280-caa50019eee1",
+          "is_selected": true,
+          "display_name": "Median P/E (TTM)",
+          "type": "semantic_model.measure",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "78313583-d9d2-4e49-a486-6d8721435d37",
+          "is_selected": true,
+          "display_name": "Median EV/EBITDA",
+          "type": "semantic_model.measure",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "ba8b55ec-e310-4513-816c-1d39ffb9202d",
+          "is_selected": true,
+          "display_name": "Avg Dividend Yield",
+          "type": "semantic_model.measure",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "50aa25ec-aa82-469a-aab7-4ac0297fe359",
+          "is_selected": true,
+          "display_name": "Avg Price-to-Book",
+          "type": "semantic_model.measure",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "1dcd7549-4867-45b7-901f-87c973d97029",
+          "is_selected": true,
+          "display_name": "Avg Return on Equity",
+          "type": "semantic_model.measure",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "30a6e71e-aaa3-4919-9e67-c4fc292c38ff",
+          "is_selected": true,
+          "display_name": "Avg Operating Margin",
+          "type": "semantic_model.measure",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "d312117e-921f-4c44-9938-75e682235209",
+      "is_selected": false,
+      "display_name": "fact_annual_financials",
+      "type": "semantic_model.table",
+      "description": null,
+      "children": [
+        {
+          "id": "f683e0e0-d0af-47a9-84d3-5c5f79a264ca",
+          "is_selected": true,
+          "display_name": "ticker",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "a8330d54-af11-49df-b6de-84ca959fc2d8",
+          "is_selected": true,
+          "display_name": "fiscal_year",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "70890f91-a04c-43a9-ab2d-a9a140b57be6",
+          "is_selected": true,
+          "display_name": "period_end",
+          "type": "semantic_model.column",
+          "data_type": "DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "cfff15a5-5271-4044-9dad-e96edd7c8728",
+          "is_selected": true,
+          "display_name": "revenue",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "10dd09f2-7f95-41cb-8a44-b4db099beba5",
+          "is_selected": true,
+          "display_name": "gross_profit",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "9d6493ea-6f2d-4ef5-92ca-52e1c9905a1a",
+          "is_selected": true,
+          "display_name": "operating_income",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "cfd9acb9-b764-487e-9930-872d068d96d2",
+          "is_selected": true,
+          "display_name": "ebit",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "4daf67a3-be92-4c14-a5f3-cc62e0f4900c",
+          "is_selected": true,
+          "display_name": "ebitda",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "159a1e84-82fc-474f-acda-eb990d0ca398",
+          "is_selected": true,
+          "display_name": "net_income",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "6fc7fa3e-3196-400f-a99b-9dd14f45f7b6",
+          "is_selected": true,
+          "display_name": "eps_basic",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "878d777e-1f4b-4b77-b9d2-256fab78d50b",
+          "is_selected": true,
+          "display_name": "eps_diluted",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "3c50614e-6be4-4566-8c18-93b24a3cef99",
+          "is_selected": true,
+          "display_name": "total_assets",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "22255ee0-eb70-41fc-8d07-657d1c359dda",
+          "is_selected": true,
+          "display_name": "book_equity",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "c4375db8-0f3c-4f03-a88c-8727881cd75d",
+          "is_selected": true,
+          "display_name": "total_debt",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "541b9e4c-4fcd-4610-a7cc-be3fcf3d1c08",
+          "is_selected": true,
+          "display_name": "cash",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "ec59f40e-4dd7-4e3d-a37b-20163d17ec7a",
+          "is_selected": true,
+          "display_name": "current_assets",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "53e49b5a-5cc7-4cf6-862a-81a084198cc2",
+          "is_selected": true,
+          "display_name": "current_liabilities",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "76525ab4-a5c0-497a-8a0f-26e175ce6e28",
+          "is_selected": true,
+          "display_name": "operating_cash_flow",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "a9065a15-7a9e-4ea5-a26a-194b910b70b2",
+          "is_selected": true,
+          "display_name": "capex",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "25c5936b-e3b9-47aa-a60c-7d4b3b0265cc",
+          "is_selected": true,
+          "display_name": "free_cash_flow",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "e6b5723f-08b5-4287-a859-a7602726da3e",
+          "is_selected": true,
+          "display_name": "net_debt",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "08978a9f-7372-405a-bee9-fa5e714f60a0",
+      "is_selected": false,
+      "display_name": "fact_return_covariance",
+      "type": "semantic_model.table",
+      "description": null,
+      "children": [
+        {
+          "id": "6204285f-2f8a-475a-8c56-3fd55e306fa6",
+          "is_selected": true,
+          "display_name": "ticker_a",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "d44744a9-369a-4444-8069-9b5d876a4d51",
+          "is_selected": true,
+          "display_name": "ticker_b",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "fa2a9a37-bd30-4d8b-805e-e299c9fbfcde",
+          "is_selected": true,
+          "display_name": "correlation",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "9e3ad835-bfb7-46e6-9d07-bd89073d780a",
+          "is_selected": true,
+          "display_name": "covariance_daily",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "6e5758ea-eafe-48e9-9762-bf269ef0aa62",
+          "is_selected": true,
+          "display_name": "covariance_annual",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "cdc8b1c9-d44b-40ae-bc18-309d4eca3253",
+          "is_selected": true,
+          "display_name": "common_trading_days",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "6e23aa30-118f-4c54-b276-6a9accd4020b",
+          "is_selected": true,
+          "display_name": "sector_a",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "c6e486ff-b114-4d19-8b9c-eb820c4c1cea",
+          "is_selected": true,
+          "display_name": "sector_b",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        }
+      ]
+    }
+  ]
+}

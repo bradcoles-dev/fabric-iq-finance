@@ -1,0 +1,44 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/dataAgent/definition/dataSource/1.0.0/schema.json",
+  "artifactId": "f9b0a143-6ca4-83af-4935-1ae596c7c667",
+  "workspaceId": "00000000-0000-0000-0000-000000000000",
+  "dataSourceInstructions": null,
+  "displayName": "Ontology",
+  "type": "ontology",
+  "userDescription": null,
+  "metadata": {},
+  "elements": [
+    {
+      "id": "Security",
+      "is_selected": true,
+      "display_name": "Security",
+      "type": "ontology.entity",
+      "description": "annualised_return,annualised_volatility,beta,company_name,country,currency,current_ratio,date_from,date_to,debt_to_equity,dividend_yield,earnings_growth_yoy,enterprise_value,eps_ttm,ev_ebitda,exchange,gross_margin,industry,market_cap,market_index,max_drawdown,operating_margin,pe_ratio_forward,pe_ratio_ttm,price_to_book,profit_margin,return_on_assets,return_on_equity,revenue_growth_yoy,sector,sharpe_ratio,ticker,trading_days,value_score",
+      "children": []
+    },
+    {
+      "id": "Sector",
+      "is_selected": true,
+      "display_name": "Sector",
+      "type": "ontology.entity",
+      "description": "sector",
+      "children": []
+    },
+    {
+      "id": "PortfolioPosition",
+      "is_selected": true,
+      "display_name": "PortfolioPosition",
+      "type": "ontology.entity",
+      "description": "as_of_date,current_dollar_amount,dollar_amount,latest_price,leftover_cash,purchase_price,price,unrealized_return,shares,current_weight,source,ticker,weight",
+      "children": []
+    },
+    {
+      "id": "AnnualFinancials",
+      "is_selected": true,
+      "display_name": "AnnualFinancials",
+      "type": "ontology.entity",
+      "description": "book_equity,capex,cash,current_assets,current_liabilities,ebit,ebitda,eps_basic,eps_diluted,fiscal_year,free_cash_flow,gross_profit,net_debt,net_income,operating_cash_flow,operating_income,period_end,revenue,ticker,total_assets,total_debt",
+      "children": []
+    }
+  ]
+}

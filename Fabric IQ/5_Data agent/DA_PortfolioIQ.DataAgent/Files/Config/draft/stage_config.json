@@ -1,0 +1,4 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/dataAgent/definition/stageConfiguration/1.0.0/schema.json",
+  "aiInstructions": "Support group by in GQL.\r\n\r\nRoute questions about KPIs, aggregates, or named metrics (e.g. \"average P/E\", \"total market cap,\" any measure from the semantic model) to the semantic model. Route questions involving relationships between securities — sector comparisons, correlation/diversification, portfolio holdings, financial history across years — to the ontology.\r\n\r\nA security's value_score property (on the Security entity) is the definitive value-screening measure — a sector-relative composite of P/E, P/B, and ROE percentile ranks. Don't compute a different definition of \"undervalued\" from raw ratios directly."
+}
