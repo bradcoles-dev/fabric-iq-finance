@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Notebook",
+    "displayName": "NB_diversification_graph"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "a71e91ca-da42-5bb0-ad5d-f188667b0dcc"
+  }
+}
