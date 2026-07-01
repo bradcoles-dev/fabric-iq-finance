@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/variableLibrary/definition/variables/1.0.0/schema.json",
+  "variables": [
+    {
+      "name": "WORKSPACE_ID",
+      "note": "",
+      "type": "Guid",
+      "value": "1797c086-b065-4d34-aaa8-27e96aebc896"
+    },
+    {
+      "name": "LAKEHOUSE_ID",
+      "note": "",
+      "type": "Guid",
+      "value": "e846b93b-5ed8-4f6c-af3b-8cd293c94398"
+    }
+  ]
+}
