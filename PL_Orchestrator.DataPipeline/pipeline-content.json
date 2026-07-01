@@ -4,8 +4,8 @@
       {
         "type": "TridentNotebook",
         "typeProperties": {
-          "notebookId": "eb0181a3-7ec3-5e84-9625-2845d0d74099",
-          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "notebookId": "9fbdc8af-6c3b-46ff-a61b-cc3fb02bef55",
+          "workspaceId": "1797c086-b065-4d34-aaa8-27e96aebc896",
           "parameters": {
             "GOLD_SCHEMA": {
               "value": "gold",
@@ -41,13 +41,15 @@
           "secureOutput": false
         },
         "name": "NB_value_screen",
+        "state": "Inactive",
+        "onInactiveMarkAs": "Succeeded",
         "dependsOn": []
       },
       {
         "type": "TridentNotebook",
         "typeProperties": {
-          "notebookId": "a71e91ca-da42-5bb0-ad5d-f188667b0dcc",
-          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "notebookId": "d9613aea-04d6-472e-a6c5-ffefffbfe420",
+          "workspaceId": "1797c086-b065-4d34-aaa8-27e96aebc896",
           "parameters": {
             "GOLD_SCHEMA": {
               "value": "gold",
@@ -83,6 +85,8 @@
           "secureOutput": false
         },
         "name": "NB_diversification_graph",
+        "state": "Inactive",
+        "onInactiveMarkAs": "Succeeded",
         "dependsOn": [
           {
             "activity": "NB_value_screen",
@@ -95,8 +99,8 @@
       {
         "type": "TridentNotebook",
         "typeProperties": {
-          "notebookId": "4dd22293-0f3c-58e0-abc8-bb0b2077ae47",
-          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "notebookId": "09888102-1ee4-4b6f-aa4c-d159c6ff600d",
+          "workspaceId": "1797c086-b065-4d34-aaa8-27e96aebc896",
           "parameters": {
             "GOLD_SCHEMA": {
               "value": "gold",
@@ -140,6 +144,8 @@
           "secureOutput": false
         },
         "name": "NB_portfolio_optimizer",
+        "state": "Inactive",
+        "onInactiveMarkAs": "Succeeded",
         "dependsOn": [
           {
             "activity": "NB_diversification_graph",
